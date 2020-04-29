@@ -30,7 +30,7 @@ def save_sp500_tickers():
     return tickers
 
 
-#save_sp500_tickers()
+# save_sp500_tickers()
 
 def get_data_from_yahoo(reload_sp500 = False):
     '''
@@ -65,18 +65,19 @@ def get_data_from_yahoo(reload_sp500 = False):
             print("we already have {}".format(ticker))
 
 
-#get_data_from_yahoo()
+# get_data_from_yahoo()
 
 
 
 def complie_data():
     with open("sp500tickers.pickle", "rb") as f:
         tickers = pickle.load(f)
+        print(tickers)
 
     main_df = pd.DataFrame()
 
     for count, ticker in enumerate(tickers[:55]):
-        print(ticker)
+        # print(ticker)
         df=pd.read_csv("stock_dfs/{}.csv".format(ticker))
         df.set_index("Date", inplace= True)
 
@@ -95,3 +96,5 @@ def complie_data():
     main_df.to_csv("sp500_joined_closes.csv")
 
 # complie_data()
+from ticker_extract import sum
+
