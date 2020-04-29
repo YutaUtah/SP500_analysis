@@ -3,3 +3,4 @@ def sum(x,y):
 
 
 #now you can use sum function in sp500.py make sure to write from ..... import .....
+#work on it tomorrow hopefully
