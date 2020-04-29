@@ -7,8 +7,14 @@ import pickle
 import requests
 
 def save_sp500_tickers():
+    '''
+    save_sp500_tickers() is to extract SP500 ticker names
+    :return: tickers
+    '''
     response = requests.get("https://en.wikipedia.org/wiki/List_of_S%26P_500_companies")
     soup = bs.BeautifulSoup(response.text, "lxml")
+
+    #specify table
     table = soup.find("table", {"class":"wikitable sortable"})
     tickers =[]
 
@@ -18,11 +24,8 @@ def save_sp500_tickers():
         tickers.append(ticker)
 
 
-
     with open("sp500tickers.pickle", "wb") as f:
         pickle.dump(tickers, f)
-
-
 
     return tickers
 
@@ -30,6 +33,12 @@ def save_sp500_tickers():
 #save_sp500_tickers()
 
 def get_data_from_yahoo(reload_sp500 = False):
+    '''
+    get_data_from_yahoo() is to get the data from yahoo finance and save it to pickle file
+    and make the folder stock_dfs to save csv file to each ticker
+    :param reload_sp500:
+    :return:
+    '''
 
     if reload_sp500:
         tickers = save_sp500_tickers()
