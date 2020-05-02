@@ -114,8 +114,9 @@ def complie_data():
 # visualize_data()
 
 
-
+# this is creating percent change in 1 day to 7 days by shift()
 def process_data_for_labels(ticker):
+
    hm_days = 7
    # this dataframe consists of the whole adjusted price. Date is index amd ticker is the column
    df = pd.read_csv("sp500_joined_closes.csv", index_col=0)
@@ -139,3 +140,5 @@ def buy_sell_hold(*args):
         if col < -requirement:
             return -1
     return 0
+
+
