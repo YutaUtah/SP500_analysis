@@ -170,5 +170,10 @@ def extract_featuresets(ticker):  # Map Helper Function to DataFrame New Column
 
 
 
+X, y, df = extract_featuresets("MMM")
 
-
+print(X)
+print("*" * 15)
+print(y)
+print("*" * 15)
+print(df)
