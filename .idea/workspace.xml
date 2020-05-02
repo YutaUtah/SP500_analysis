@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="99f08853-a484-4131-abd4-af420b0d6542" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/sp500.py" beforeDir="false" afterPath="$PROJECT_DIR$/sp500.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mpl_</find>
+      <find>stock_dfs</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bL4eHgMXPZGoZNnU5Vl1bPZDbN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
+  </component>
+  <component name="RunManager">
+    <configuration name="sp500.py" type="PythonConfigurationType" factoryName="Python">
+      <module name="sendex_finance" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/anaconda3/bin/python3.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sp500.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99f08853-a484-4131-abd4-af420b0d6542" name="Default Changelist" comment="" />
+      <created>1587899257565</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587899257565</updated>
+    </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1588163050174</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588163050174</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update">
+      <created>1588163486264</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588163486264</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update">
+      <created>1588165135529</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588165135529</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update">
+      <created>1588165261499</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588165261499</updated>
+    </task>
+    <task id="LOCAL-00005" summary="first commit!">
+      <created>1588165354105</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1588165354105</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <MESSAGE value="first commit!" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit!" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1281" height="377" key="GridCell.Tab.0.bottom" timestamp="1588409005162">
+      <screen x="1440" y="-436" width="2560" height="1417" />
+    </state>
+    <state width="1281" height="377" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588409005162" />
+    <state width="1281" height="377" key="GridCell.Tab.0.center" timestamp="1588409005160">
+      <screen x="1440" y="-436" width="2560" height="1417" />
+    </state>
+    <state width="1281" height="377" key="GridCell.Tab.0.center/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588409005160" />
+    <state width="1281" height="377" key="GridCell.Tab.0.left" timestamp="1588409005159">
+      <screen x="1440" y="-436" width="2560" height="1417" />
+    </state>
+    <state width="1281" height="377" key="GridCell.Tab.0.left/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588409005159" />
+    <state width="1281" height="377" key="GridCell.Tab.0.right" timestamp="1588409005161">
+      <screen x="1440" y="-436" width="2560" height="1417" />
+    </state>
+    <state width="1281" height="377" key="GridCell.Tab.0.right/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588409005161" />
+  </component>
+</project>

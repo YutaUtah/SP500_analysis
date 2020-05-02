@@ -1,10 +1,19 @@
+
+from visualize_correlation import visualize_data
+
 import bs4 as bs
 import datetime as dt
 import os
 import pandas as pd
+import numpy as np
 import pandas_datareader.data as web
 import pickle
 import requests
+
+
+
+
+
 
 def save_sp500_tickers():
     '''
@@ -23,7 +32,7 @@ def save_sp500_tickers():
         ticker = ticker[:-1]
         tickers.append(ticker)
 
-    #write in pickle file f
+    #write in pickle fidle f
     with open("sp500tickers.pickle", "wb") as f:
         pickle.dump(tickers, f)
 
@@ -81,9 +90,13 @@ def complie_data():
         df=pd.read_csv("stock_dfs/{}.csv".format(ticker))
         df.set_index("Date", inplace= True)
 
+
+        # this is to rename "Adj Close" to each ticker names
         df.rename(columns = {"Adj Close": ticker}, inplace = True)
+        # 1 means axis
         df.drop(["Open","High","Low","Close","Volume"],1,inplace=True)
 
+        #
         if main_df.empty:
             main_df = df
         else:
@@ -96,5 +109,33 @@ def complie_data():
     main_df.to_csv("sp500_joined_closes.csv")
 
 # complie_data()
-from ticker_extract import sum
 
+
+# visualize_data()
+
+
+
+def process_data_for_labels(ticker):
+   hm_days = 7
+   # this dataframe consists of the whole adjusted price. Date is index amd ticker is the column
+   df = pd.read_csv("sp500_joined_closes.csv", index_col=0)
+   df.fillna(0, inplace=True)
+   #create a list of the columns
+   tickers = df.columns.values.tolist()
+
+   for i in range(1, hm_days+1):
+        df["{}_{}d".format(ticker,i)] = (df[ticker].shift(-i) - df[ticker]) / df[ticker]
+
+   df.fillna(0, inplace=True)
+
+   return ticker, df
+
+def buy_sell_hold(*args):
+    cols = [c for c in args]
+    requirement = 0.02
+    for col in cols:
+        if col > requirement:
+            return 1
+        if col < -requirement:
+            return -1
+    return 0
