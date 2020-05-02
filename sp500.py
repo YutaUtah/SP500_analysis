@@ -125,12 +125,15 @@ def process_data_for_labels(ticker):
    tickers = df.columns.values.tolist()
 
    for i in range(1, hm_days+1):
+        # shift the row by i-th ABOVE
         df["{}_{}d".format(ticker,i)] = (df[ticker].shift(-i) - df[ticker]) / df[ticker]
 
    df.fillna(0, inplace=True)
 
    return ticker, df
 
+
+#create rating criteria
 def buy_sell_hold(*args):
     cols = [c for c in args]
     requirement = 0.02
@@ -141,4 +144,7 @@ def buy_sell_hold(*args):
             return -1
     return 0
 
+def extract_featuresets(ticker):
+    tickers, df = process_data_for_labels(ticker)
 
+    # df["{}_target".format(ticker)] = l
