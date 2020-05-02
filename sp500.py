@@ -16,8 +16,6 @@ from collections import Counter
 
 
 
-
-
 def save_sp500_tickers():
     '''
     save_sp500_tickers() is to extract SP500 ticker names
@@ -42,7 +40,7 @@ def save_sp500_tickers():
     return tickers
 
 
-# save_sp500_tickers()
+
 
 def get_data_from_yahoo(reload_sp500 = False):
     '''
@@ -77,7 +75,6 @@ def get_data_from_yahoo(reload_sp500 = False):
             print("we already have {}".format(ticker))
 
 
-# get_data_from_yahoo()
 
 
 
@@ -111,35 +108,29 @@ def complie_data():
     print(main_df.head())
     main_df.to_csv("sp500_joined_closes.csv")
 
-# complie_data()
 
 
-# visualize_data()
+
+##Applying Machine Learning to Correlation Tables
+def process_data_for_labels(ticker):  # Prepares Labels
+    hm_days = 7  # how many days in the future do we have to make or lose 'x%'
+    df = pd.read_csv('sp500_joined_closes.csv', index_col=0)
+    tickers = df.columns.values.tolist()
+    df.fillna(0, inplace=True)
+
+    for i in range(1, hm_days + 1):
+        df['{}_{}d'.format(ticker, i)] = (df[ticker].shift(-i) - df[ticker]) / df[ticker]  # generates % changes
+
+    df.fillna(0, inplace=True)
+    return tickers, df
 
 
-# this is creating percent change in 1 day to 7 days by shift()
-def process_data_for_labels(ticker):
-
-   hm_days = 7
-   # this dataframe consists of the whole adjusted price. Date is index amd ticker is the column
-   df = pd.read_csv("sp500_joined_closes.csv", index_col=0)
-   df.fillna(0, inplace=True)
-   #create a list of the columns
-   tickers = df.columns.values.tolist()
-
-   for i in range(1, hm_days+1):
-        # shift the row by i-th ABOVE
-        df["{}_{}d".format(ticker,i)] = (df[ticker].shift(-i) - df[ticker]) / df[ticker]
-
-   df.fillna(0, inplace=True)
-
-   return ticker, df
+# process_data_for_labels('TSLA')
 
 
-#create rating criteria
-def buy_sell_hold(*args):
-    cols = [c for c in args]
-    requirement = 0.02
+def buy_sell_hold(*args):  # Helper Function
+    cols = [c for c in args]  # mapping to pandas
+    requirement = 0.02  # if stock price changes by 2% in 7 days
     for col in cols:
         if col > requirement:
             return 1
@@ -148,40 +139,36 @@ def buy_sell_hold(*args):
     return 0
 
 
-
-def extract_featuresets(ticker):
+def extract_featuresets(ticker):  # Map Helper Function to DataFrame New Column
     tickers, df = process_data_for_labels(ticker)
-
-    df["{}_target".format(ticker)] = list(map(buy_sell_hold,
-                                              df["{}_1d".format(ticker)],
-                                              df["{}_2d".format(ticker)],
-                                              df["{}_3d".format(ticker)],
-                                              df["{}_4d".format(ticker)],
-                                              df["{}_5d".format(ticker)],
-                                              df["{}_6d".format(ticker)],
-                                              df["{}_7d".format(ticker)]))
-
-    vals = df["{}_target".format(ticker)].values.tolist()
+    df['{}_target'.format(ticker)] = list(map(buy_sell_hold,
+                                              df['{}_1d'.format(ticker)],
+                                              df['{}_2d'.format(ticker)],
+                                              df['{}_3d'.format(ticker)],
+                                              df['{}_4d'.format(ticker)],
+                                              df['{}_5d'.format(ticker)],
+                                              df['{}_6d'.format(ticker)],
+                                              df['{}_7d'.format(ticker)]
+                                              ))
+    vals = df['{}_target'.format(ticker)].values.tolist()
     str_vals = [str(i) for i in vals]
-    print("Data spread: ", Counter(str_vals))
-    df.fillna(0, inplace = True)
+    print('Data spread:', Counter(str_vals))
 
-    # replace inf / -inf with nan
-    df = df.replace([np.inf, -np.inf], np.nan)
-    # drop na for above function
-    df.dropna(inplace = True)
+    df.fillna(0, inplace=True)
+    df = df.replace([np.inf, -np.inf], np.nan)  # replaces any infinite price changes with NAN's
+    df.dropna(inplace=True)
 
-    df_vals = df[[ticker for ticker in tickers]].pct_change()
-    df_vals = df_vals.replace([np.inf, -np.inf], 0)
-    df_vals.fillna(0, inplace = True)
+    df_vals = df[[ticker for ticker in
+                  tickers]].pct_change()  # normalizes price changes (today's value as opposed to yesterday) == % change data for all S&P500 companies including company in question
+    df_vals = df.replace([np.inf, -np.inf], 0)  # replace infinite price changes with 0's
+    df_vals.fillna(0, inplace=True)  # replace NAN's with 0's
 
-    X = df_vals.values
-    y = df["{}_target".format(ticker)].values
+    X = df_vals.values  # defines feature set  == % change data for all S&P500 companies including company in question
+    y = df['{}_target'.format(ticker)].values  # defines target (0, 1 or -1)
 
-    return X, y
+    return X, y, df
 
 
-extract_featuresets("MMM")
 
 
 

@@ -22,9 +22,7 @@
   <component name="ChangeListManager">
     <list default="true" id="99f08853-a484-4131-abd4-af420b0d6542" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/testing_pandas-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/testing_pandas-checkpoint.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sp500.py" beforeDir="false" afterPath="$PROJECT_DIR$/sp500.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testing_pandas.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/testing_pandas.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +60,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="/anaconda3/bin/python3.7" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -157,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588412293388</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Merge branch 'master' of https://github.com/YutaUtah/SP500_analysis&#10;&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit.">
+      <created>1588430153628</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1588430153628</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -201,60 +206,53 @@
     <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/YutaUtah/SP500_analysis&#10;&#10;# Please enter a commit message to explain why this merge is necessary,&#10;# especially if it merges an updated upstream into a topic branch.&#10;#&#10;# Lines starting with '#' will be ignored, and an empty message aborts&#10;# the commit." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2936" y="-152" key="CommitChangelistDialog2" timestamp="1588412293267">
+    <state x="2813" y="-66" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588436398826">
       <screen x="1440" y="-436" width="2560" height="1417" />
     </state>
-    <state x="2936" y="-152" key="CommitChangelistDialog2/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588412293267" />
+    <state x="2813" y="-66" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588436398826" />
+    <state x="2936" y="-152" key="CommitChangelistDialog2" timestamp="1588430153400">
+      <screen x="1440" y="-436" width="2560" height="1417" />
+    </state>
+    <state x="2936" y="-152" key="CommitChangelistDialog2/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588430153400" />
     <state x="1440" y="-459" width="2560" height="1440" key="DiffContextDialog" timestamp="1588409485958">
       <screen x="1440" y="-436" width="2560" height="1417" />
     </state>
     <state x="1440" y="-459" width="2560" height="1440" key="DiffContextDialog/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588409485958" />
-    <state width="1281" height="502" key="GridCell.Tab.0.bottom" timestamp="1588429869760">
+    <state width="1281" height="377" key="GridCell.Tab.0.bottom" timestamp="1588437073839">
       <screen x="1440" y="-436" width="2560" height="1417" />
     </state>
-    <state width="1281" height="502" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588429869760" />
-    <state width="1281" height="502" key="GridCell.Tab.0.center" timestamp="1588429869760">
+    <state width="1281" height="377" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588437073839" />
+    <state width="1281" height="377" key="GridCell.Tab.0.center" timestamp="1588437073838">
       <screen x="1440" y="-436" width="2560" height="1417" />
     </state>
-    <state width="1281" height="502" key="GridCell.Tab.0.center/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588429869760" />
-    <state width="1281" height="502" key="GridCell.Tab.0.left" timestamp="1588429869759">
+    <state width="1281" height="377" key="GridCell.Tab.0.center/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588437073838" />
+    <state width="1281" height="377" key="GridCell.Tab.0.left" timestamp="1588437073838">
       <screen x="1440" y="-436" width="2560" height="1417" />
     </state>
-    <state width="1281" height="502" key="GridCell.Tab.0.left/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588429869759" />
-    <state width="1281" height="502" key="GridCell.Tab.0.right" timestamp="1588429869760">
+    <state width="1281" height="377" key="GridCell.Tab.0.left/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588437073838" />
+    <state width="1281" height="377" key="GridCell.Tab.0.right" timestamp="1588437073839">
       <screen x="1440" y="-436" width="2560" height="1417" />
     </state>
-    <state width="1281" height="502" key="GridCell.Tab.0.right/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588429869760" />
-    <state width="1281" height="502" key="GridCell.Tab.1.bottom" timestamp="1588429869684">
+    <state width="1281" height="377" key="GridCell.Tab.0.right/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588437073839" />
+    <state width="1281" height="502" key="GridCell.Tab.1.bottom" timestamp="1588436728948">
       <screen x="1440" y="-436" width="2560" height="1417" />
     </state>
-    <state width="1281" height="502" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588429869684" />
-    <state width="1281" height="502" key="GridCell.Tab.1.center" timestamp="1588429869683">
+    <state width="1281" height="502" key="GridCell.Tab.1.bottom/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588436728948" />
+    <state width="1281" height="502" key="GridCell.Tab.1.center" timestamp="1588436728947">
       <screen x="1440" y="-436" width="2560" height="1417" />
     </state>
-    <state width="1281" height="502" key="GridCell.Tab.1.center/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588429869683" />
-    <state width="1281" height="502" key="GridCell.Tab.1.left" timestamp="1588429869683">
+    <state width="1281" height="502" key="GridCell.Tab.1.center/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588436728947" />
+    <state width="1281" height="502" key="GridCell.Tab.1.left" timestamp="1588436728947">
       <screen x="1440" y="-436" width="2560" height="1417" />
     </state>
-    <state width="1281" height="502" key="GridCell.Tab.1.left/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588429869683" />
-    <state width="1281" height="502" key="GridCell.Tab.1.right" timestamp="1588429869684">
+    <state width="1281" height="502" key="GridCell.Tab.1.left/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588436728947" />
+    <state width="1281" height="502" key="GridCell.Tab.1.right" timestamp="1588436728948">
       <screen x="1440" y="-436" width="2560" height="1417" />
     </state>
-    <state width="1281" height="502" key="GridCell.Tab.1.right/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588429869684" />
-    <state x="2949" y="12" key="Vcs.Push.Dialog.v2" timestamp="1588410857432">
+    <state width="1281" height="502" key="GridCell.Tab.1.right/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588436728948" />
+    <state x="2949" y="12" key="Vcs.Push.Dialog.v2" timestamp="1588430155544">
       <screen x="1440" y="-436" width="2560" height="1417" />
     </state>
-    <state x="2949" y="12" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588410857432" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/sp500.py</url>
-          <line>183</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="2949" y="12" key="Vcs.Push.Dialog.v2/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588430155544" />
   </component>
 </project>
