@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99f08853-a484-4131-abd4-af420b0d6542" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/sp500.py" beforeDir="false" afterPath="$PROJECT_DIR$/sp500.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +33,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
@@ -104,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588165354105</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="first commit!">
+      <created>1588409083948</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588409083948</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">
@@ -123,6 +132,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="first commit!" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="2936" y="-152" key="CommitChangelistDialog2" timestamp="1588409083808">
+      <screen x="1440" y="-436" width="2560" height="1417" />
+    </state>
+    <state x="2936" y="-152" key="CommitChangelistDialog2/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588409083808" />
+    <state x="1440" y="-459" width="2560" height="1440" key="DiffContextDialog" timestamp="1588409485958">
+      <screen x="1440" y="-436" width="2560" height="1417" />
+    </state>
+    <state x="1440" y="-459" width="2560" height="1440" key="DiffContextDialog/0.23.1440.877/1440.-436.2560.1417@1440.-436.2560.1417" timestamp="1588409485958" />
     <state width="1281" height="377" key="GridCell.Tab.0.bottom" timestamp="1588409005162">
       <screen x="1440" y="-436" width="2560" height="1417" />
     </state>
