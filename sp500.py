@@ -1,5 +1,5 @@
 
-from visualize_correlation import visualize_data
+
 
 import bs4 as bs
 import datetime as dt
@@ -10,8 +10,13 @@ import pandas_datareader.data as web
 import pickle
 import requests
 from collections import Counter
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import LinearSVC
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import VotingClassifier
 
-
+from visualize_correlation import visualize_data
 
 
 
@@ -78,7 +83,7 @@ def get_data_from_yahoo(reload_sp500 = False):
 
 
 
-def complie_data():
+def comppile_data():
     with open("sp500tickers.pickle", "rb") as f:
         tickers = pickle.load(f)
         print(tickers)
@@ -169,11 +174,33 @@ def extract_featuresets(ticker):  # Map Helper Function to DataFrame New Column
     return X, y, df
 
 
-
+# X includes the whole compnies data
+# y is 1, -1, 0
 X, y, df = extract_featuresets("MMM")
+# print(X)
+# print(y)
 
-print(X)
-print("*" * 15)
-print(y)
-print("*" * 15)
-print(df)
+
+
+
+def do_ml(ticker):
+    X, y, df = extract_featuresets(ticker)
+    X_train, X_test, y_train, y_test = train_test_split(X,
+                                                        y,
+                                                        test_size=0.25)
+
+    # clf = KNeighborsClassifier()
+
+    clf = VotingClassifier([("lsvc", LinearSVC()),
+                            ("knn", KNeighborsClassifier()),
+                            ("rfor", RandomForestClassifier)])
+
+    clf.fit(X_train,y_train)
+    confidence = clf.score(X_test, y_test)
+    print("Accuracy: ", confidence)
+    prediction = clf.predict(X_test)
+    print("Predicted spread", Counter(prediction))
+
+    return confidence
+
+do_ml("MMM")
